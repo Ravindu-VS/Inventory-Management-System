@@ -1,0 +1,11 @@
+.label {
+    -fx-font-family: "Arial";
+    -fx-text-fill: #333;
+}
+
+.button {
+    -fx-background-color: #2196F3;
+    -fx-text-fill: #fff;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow( one-pass-box , rgba(0,0,0,0.4) , 3,0.0,0,1 );
+}

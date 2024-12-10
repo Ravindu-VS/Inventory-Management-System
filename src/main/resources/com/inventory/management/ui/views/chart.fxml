@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.inventory.management.ui.ChartController">
+    <center>
+        <BarChart fx:id="barChart" title="Inventory Chart">
+            <xAxis>
+                <CategoryAxis label="Category"/>
+            </xAxis>
+            <yAxis>
+                <NumberAxis label="Quantity"/>
+            </yAxis>
+        </BarChart>
+    </center>
+</BorderPane>

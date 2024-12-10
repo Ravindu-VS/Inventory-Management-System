@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.inventory.management.ui.MainController">
+    <top>
+        <Label fx:id="welcomeLabel" style="-fx-font-size:16px; -fx-padding:10px;"/>
+    </top>
+    <center>
+        <TableView fx:id="productTable">
+            <columns>
+                <TableColumn fx:id="colId" text="Product ID"/>
+                <TableColumn fx:id="colName" text="Name"/>
+                <TableColumn fx:id="colPrice" text="Price"/>
+                <TableColumn fx:id="colQuantity" text="Quantity"/>
+                <TableColumn fx:id="colCategory" text="Category"/>
+            </columns>
+        </TableView>
+    </center>
+</BorderPane>
