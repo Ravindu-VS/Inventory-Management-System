@@ -4,7 +4,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b4dc8f4b-4930-45e1-a53c-bf7fcf3fe3e9" name="Changes" comment="started" />
+    <list default="true" id="b4dc8f4b-4930-45e1-a53c-bf7fcf3fe3e9" name="Changes" comment="started">
+      <change afterPath="$PROJECT_DIR$/src/main/Images/cards-with-dollar-sign.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/Images/categories.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/Images/filter.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/Images/home-icon-silhouette.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/Images/line-chart.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/Images/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/Images/logout.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/Images/padlock.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/Images/report.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/Images/sort.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Images/lock.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Images/lock.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/inventory/management/model/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/inventory/management/model/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/inventory/management/ui/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/inventory/management/ui/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/inventory/management/ui/UIManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/inventory/management/ui/UIManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/inventory/management/ui/views/login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/inventory/management/ui/views/login.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/inventory/management/ui/views/main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/inventory/management/ui/views/main.fxml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -39,10 +58,11 @@
   "keyToString": {
     "Application.JavaFX.executor": "Run",
     "Application.Main.executor": "Run",
+    "Application.UIManager.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Ravindu-VS/IdeaProjects/InventoryManagementSystem/src/Images",
+    "last_opened_file_path": "C:/Users/Ravindu-VS/IdeaProjects/InventoryManagementSystem/src/main/Images",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -59,6 +79,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Ravindu-VS\IdeaProjects\InventoryManagementSystem\src\main\Images" />
       <recent name="C:\Users\Ravindu-VS\IdeaProjects\InventoryManagementSystem\src\Images" />
       <recent name="C:\Users\Ravindu-VS\IdeaProjects\InventoryManagementSystem\src\main\java\com\inventory\management" />
     </key>
@@ -103,7 +124,9 @@
       <workItem from="1733826829049" duration="2290000" />
       <workItem from="1733838717855" duration="1874000" />
       <workItem from="1733842613899" duration="1062000" />
-      <workItem from="1733850621447" duration="4539000" />
+      <workItem from="1733850621447" duration="4883000" />
+      <workItem from="1733856476074" duration="45000" />
+      <workItem from="1733896797777" duration="25228000" />
     </task>
     <task id="LOCAL-00001" summary="started">
       <option name="closed" value="true" />
@@ -121,7 +144,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733855583284</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="started">
+      <option name="closed" value="true" />
+      <created>1733856274359</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1733856274359</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
