@@ -9,137 +9,54 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.VBox?>
-<?import javafx.scene.paint.Color?>
-<?import javafx.scene.paint.LinearGradient?>
-<?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.inventory.management.ui.LoginController">
+<BorderPane prefHeight="800" prefWidth="1200" style="-fx-font-family: 'Roboto', 'Arial', sans-serif; -fx-background-color: linear-gradient(to bottom   left, #4ceb44, blue);" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.inventory.management.ui.LoginController">
+
+   <!-- CENTER LOGIN FORM -->
    <center>
-      <VBox alignment="CENTER" prefHeight="600.0" prefWidth="387.0" spacing="10" style="-fx-background-color: #FFF; -fx-border-color: #000;">
+      <VBox alignment="CENTER" prefHeight="800.0" prefWidth="519.0" spacing="20" style="-fx-padding: 40;">
          <children>
-            <AnchorPane prefHeight="606.0" prefWidth="387.0" style="-fx-background-color: #FFF;">
+
+                  <VBox prefHeight="596.0" prefWidth="353.0" spacing="10" style="-fx-background-color: rgba(255,255,255,0.7); -fx-padding: 30; -fx-background-radius: 10; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10,0,0,2);">
                <children>
-                  <Button layoutX="37.0" layoutY="491.0" onAction="#onLogin" prefHeight="39.0" prefWidth="313.0" style="-fx-font-weight: bold; -fx-background-color: green; -fx-border-radius: 20px;" text="Login" textFill="WHITE">
-                     <font>
-                        <Font size="20.0" />
-                     </font>
-                  </Button>
-                  <PasswordField fx:id="passwordField" layoutX="149.0" layoutY="415.0" prefHeight="35.0" prefWidth="200.0" promptText="Password" />
-                  <TextField fx:id="usernameField" layoutX="150.0" layoutY="356.0" prefHeight="35.0" prefWidth="200.0" promptText="Username" />
-                  <Label layoutX="37.0" layoutY="416.0" style="-fx-font-size: 20px; -fx-font-weight: bold;" text="Password">
-                     <textFill>
-                        <LinearGradient endX="0.9495267898126356" endY="1.0" startX="0.24921135797109512" startY="0.6151419686218166">
-                           <stops>
-                              <Stop>
-                                 <color>
-                                    <Color red="0.16184751689434052" green="0.5350877046585083" blue="0.5350877046585083" />
-                                 </color>
-                              </Stop>
-                              <Stop offset="0.9955257270693513">
-                                 <color>
-                                    <Color red="0.12150747328996658" green="0.7719298005104065" blue="0.24075156450271606" />
-                                 </color>
-                              </Stop>
-                              <Stop offset="1.0">
-                                 <color>
-                                    <Color red="0.12150747328996658" green="0.7719298005104065" blue="0.24075156450271606" />
-                                 </color>
-                              </Stop>
-                           </stops>
-                        </LinearGradient>
-                     </textFill>
-                  </Label>
-                  <Label layoutX="37.0" layoutY="357.0" style="-fx-font-size: 20px; -fx-font-weight: bold;" text="Username">
-                     <textFill>
-                        <LinearGradient endX="0.9495267898126356" endY="1.0" startX="0.24921135797109512" startY="0.6151419686218166">
-                           <stops>
-                              <Stop>
-                                 <color>
-                                    <Color red="0.16184751689434052" green="0.5350877046585083" blue="0.5350877046585083" />
-                                 </color>
-                              </Stop>
-                              <Stop offset="0.9955257270693513">
-                                 <color>
-                                    <Color red="0.12150747328996658" green="0.7719298005104065" blue="0.24075156450271606" />
-                                 </color>
-                              </Stop>
-                              <Stop offset="1.0">
-                                 <color>
-                                    <Color red="0.12150747328996658" green="0.7719298005104065" blue="0.24075156450271606" />
-                                 </color>
-                              </Stop>
-                           </stops>
-                        </LinearGradient>
-                     </textFill>
-                  </Label>
-                  <ImageView fitHeight="147.0" fitWidth="137.0" layoutX="125.0" layoutY="75.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../../../../Images/lock.png" />
-                     </image>
-                  </ImageView>
-                  <Label layoutX="141.0" layoutY="242.0" style="-fx-font-size: 40px; -fx-font-weight: bold;" text="Login">
-                     <textFill>
-                        <LinearGradient endX="0.9495267898126356" endY="1.0" startX="0.24921135797109512" startY="0.6151419686218166">
-                           <stops>
-                              <Stop>
-                                 <color>
-                                    <Color red="0.16184751689434052" green="0.5350877046585083" blue="0.5350877046585083" />
-                                 </color>
-                              </Stop>
-                              <Stop offset="0.9955257270693513">
-                                 <color>
-                                    <Color red="0.12150747328996658" green="0.7719298005104065" blue="0.24075156450271606" />
-                                 </color>
-                              </Stop>
-                              <Stop offset="1.0">
-                                 <color>
-                                    <Color red="0.12150747328996658" green="0.7719298005104065" blue="0.24075156450271606" />
-                                 </color>
-                              </Stop>
-                           </stops>
-                        </LinearGradient>
-                     </textFill>
-                  </Label>
+                  <AnchorPane prefHeight="571.0" prefWidth="293.0">
+                     <children>
+
+                              <Button fx:id="loginButton" alignment="CENTER" contentDisplay="CENTER" layoutX="14.0" layoutY="447.0" onAction="#onLogin" prefHeight="47.0" prefWidth="329.0" style="-fx-background-color: #4ceb44; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 5; -fx-padding: 10;" text="Login">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                        <PasswordField fx:id="passwordField" layoutX="14.0" layoutY="375.0" prefHeight="33.0" prefWidth="334.0" promptText="Enter your password" style="-fx-background-radius: 5; -fx-background-color: #f5f5f5; -fx-padding: 8;" />
+                        <TextField fx:id="usernameField" layoutX="14.0" layoutY="283.0" prefHeight="33.0" prefWidth="334.0" promptText="Enter your username" style="-fx-background-radius: 5; -fx-background-color: #f5f5f5; -fx-padding: 8;" />
+                        <Label layoutX="14.0" layoutY="242.0" style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-text-fill: #333;" text="Username" />
+
+                              <Label layoutX="16.0" layoutY="338.0" style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-text-fill: #333;" text="Password" />
+                        <Label layoutX="139.0" layoutY="178.0" style="-fx-font-size: 32px; -fx-font-weight: bold; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 5,0,0,2);" text="Login" textFill="BLUE" />
+                        <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="131.0" layoutY="53.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../../Images/padlock.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
                </children>
-            </AnchorPane>
+            </VBox>
          </children>
       </VBox>
    </center>
+
+   <!-- LEFT SIDE IMAGE/INFO -->
    <left>
-      <AnchorPane prefHeight="600.0" prefWidth="500.0" style="-fx-background-color: #D5D5D5; -fx-border-color: #000;" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="800.0" prefWidth="698.0" style="-fx-background-color: white;">
          <children>
-            <ImageView fitHeight="471.0" fitWidth="613.0" layoutY="96.0" pickOnBounds="true" preserveRatio="true" style="-fx-background-color: #808;">
+            <ImageView fitHeight="548.0" fitWidth="696.0" layoutX="1.0" layoutY="146.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../../../../Images/bg.png" />
                </image>
             </ImageView>
-            <Label layoutX="23.0" layoutY="28.0" style="-fx-font-size: 38px; -fx-font-family: OKDBOLIDDA; -fx-font-weight: bold;" text="Inventory Management System">
-               <font>
-                  <Font size="22.0" />
-               </font>
-               <textFill>
-                  <LinearGradient endX="0.9495267898126356" endY="1.0" startX="0.24921135797109512" startY="0.6151419686218166">
-                     <stops>
-                        <Stop>
-                           <color>
-                              <Color red="0.16184751689434052" green="0.5350877046585083" blue="0.5350877046585083" />
-                           </color>
-                        </Stop>
-                        <Stop offset="0.9955257270693513">
-                           <color>
-                              <Color red="0.12150747328996658" green="0.7719298005104065" blue="0.24075156450271606" />
-                           </color>
-                        </Stop>
-                        <Stop offset="1.0">
-                           <color>
-                              <Color red="0.12150747328996658" green="0.7719298005104065" blue="0.24075156450271606" />
-                           </color>
-                        </Stop>
-                     </stops>
-                  </LinearGradient>
-               </textFill>
-            </Label>
+            <Label layoutX="50.0" layoutY="30.0" style="-fx-font-size: 35px; -fx-font-weight: bold; -fx-text-fill: blue;" text="Inventory Management System" />
          </children>
       </AnchorPane>
    </left>
