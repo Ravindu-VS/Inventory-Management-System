@@ -4,7 +4,47 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b4dc8f4b-4930-45e1-a53c-bf7fcf3fe3e9" name="Changes" comment="started" />
+    <list default="true" id="b4dc8f4b-4930-45e1-a53c-bf7fcf3fe3e9" name="Changes" comment="ui updated">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/inventory/management/recursive/CalculationUtility.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/inventory/management/recursive/SearchUtility.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/inventory/management/sorting/MultiCriteriaSorting.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/inventory/management/sorting/SortingAlgorithms.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/inventory/management/sorting/SortingUtility.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/inventory/management/ui/AddProductController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/inventory/management/ui/EditProductController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/inventory/management/ui/InventoryBackupManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/inventory/management/ui/RealTimeProduct.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/inventory/management/utils/AuthenticationManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/inventory/management/utils/ChartManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/inventory/management/utils/ChartUtility.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/inventory/management/utils/FilteringUtility.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/inventory/management/utils/InventoryManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/inventory/management/utils/PDFReportManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/inventory/management/utils/ValidationUtility.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/inventory/management/ui/views/AddProductDialog.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/inventory/management/ui/views/EditProductDialog.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/inventory/management/model/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/inventory/management/model/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/inventory/management/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/inventory/management/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/inventory/management/performance/PerformanceAnalysis.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/inventory/management/performance/PerformanceAnalysis.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/inventory/management/recursive/RecursiveOperations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/inventory/management/recursive/RecursiveOperations.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/inventory/management/sorting/MergeSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/inventory/management/sorting/MergeSort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/inventory/management/sorting/QuickSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/inventory/management/sorting/QuickSort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/inventory/management/sorting/ShellSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/inventory/management/sorting/ShellSort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/inventory/management/ui/ChartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/inventory/management/ui/ChartController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/inventory/management/ui/InventoryUpdateController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/inventory/management/ui/InventoryUpdateController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/inventory/management/ui/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/inventory/management/ui/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/inventory/management/ui/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/inventory/management/ui/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/inventory/management/ui/UIManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/inventory/management/ui/UIManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/inventory/management/ui/views/chart.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/inventory/management/ui/views/chart.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/inventory/management/ui/views/login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/inventory/management/ui/views/login.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/inventory/management/ui/views/main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/inventory/management/ui/views/main.fxml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,12 +54,19 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
+        <option value="FxmlFile" />
         <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="jar://$MAVEN_REPOSITORY$/org/openjfx/javafx-graphics/23.0.1/javafx-graphics-23.0.1-sources.jar!/com/sun/glass/ui/win/WinApplication.java" root0="SKIP_INSPECTION" />
+    <setting file="jar://$MAVEN_REPOSITORY$/org/openjfx/javafx-graphics/23.0.1/javafx-graphics-23.0.1-sources.jar!/com/sun/javafx/tk/quantum/GlassViewEventHandler.java" root0="SKIP_INSPECTION" />
+    <setting file="jar://$MAVEN_REPOSITORY$/org/openjfx/javafx-graphics/23.0.1/javafx-graphics-23.0.1-sources.jar!/com/sun/javafx/tk/quantum/QuantumToolkit.java" root0="SKIP_INSPECTION" />
   </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
@@ -37,9 +84,11 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
     "Application.JavaFX.executor": "Run",
     "Application.Main.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/Ravindu-VS/IdeaProjects/InventoryManagementSystem/src/Images",
@@ -75,7 +124,7 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="com.inventory.management.Main" />
       <module name="InventoryManagementSystem" />
-      <option name="VM_PARAMETERS" value="--module-path &quot;C:\Users\Ravindu-VS\scoop\apps\gluon-openjfx-sdk\current\lib&quot; --add-modules javafx.controls,javafx.fxml " />
+      <option name="VM_PARAMETERS" value="--module-path C:\Java\javafx-sdk-23.0.1\lib --add-modules javafx.controls,javafx.fxml " />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -104,6 +153,9 @@
       <workItem from="1733838717855" duration="1874000" />
       <workItem from="1733842613899" duration="1062000" />
       <workItem from="1733850621447" duration="4539000" />
+      <workItem from="1733984918029" duration="21308000" />
+      <workItem from="1734365678583" duration="753000" />
+      <workItem from="1734368608326" duration="37877000" />
     </task>
     <task id="LOCAL-00001" summary="started">
       <option name="closed" value="true" />
@@ -139,19 +191,9 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="started" />
     <option name="LAST_COMMIT_MESSAGE" value="started" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/inventory/management/Main.java</url>
-          <line>13</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

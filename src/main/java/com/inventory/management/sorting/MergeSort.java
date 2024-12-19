@@ -2,40 +2,53 @@ package com.inventory.management.sorting;
 
 import com.inventory.management.model.Product;
 
+import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
+/**
+ * Implements Merge Sort algorithm for sorting products.
+ */
 public class MergeSort {
 
-    public static void sortByName(List<Product> products) {
-        if (products.size() < 2) return;
-        int mid = products.size() / 2;
-
-        List<Product> left = products.subList(0, mid);
-        List<Product> right = products.subList(mid, products.size());
-
-        sortByName(left);
-        sortByName(right);
-
-        merge(products, left, right);
+    /**
+     * Sorts the list of products using the provided comparator.
+     *
+     * @param products   the list of products to sort
+     * @param comparator the comparator defining the sort order
+     */
+    public static void sort(List<Product> products, Comparator<Product> comparator) {
+        if (products == null || products.size() <= 1) return;
+        mergeSort(products, 0, products.size() - 1, comparator);
     }
 
-    private static void merge(List<Product> products, List<Product> left, List<Product> right) {
-        int i = 0, j = 0, k = 0;
+    private static void mergeSort(List<Product> products, int left, int right, Comparator<Product> comparator) {
+        if (left >= right) return;
+        int mid = left + (right - left) / 2;
+        mergeSort(products, left, mid, comparator);
+        mergeSort(products, mid + 1, right, comparator);
+        merge(products, left, mid, right, comparator);
+    }
 
-        while (i < left.size() && j < right.size()) {
-            if (left.get(i).getName().compareToIgnoreCase(right.get(j).getName()) <= 0) {
-                products.set(k++, left.get(i++));
+    private static void merge(List<Product> products, int left, int mid, int right, Comparator<Product> comparator) {
+        List<Product> leftList = new ArrayList<>(products.subList(left, mid + 1));
+        List<Product> rightList = new ArrayList<>(products.subList(mid + 1, right + 1));
+
+        int i = 0, j = 0, k = left;
+        while (i < leftList.size() && j < rightList.size()) {
+            if (comparator.compare(leftList.get(i), rightList.get(j)) <= 0) {
+                products.set(k++, leftList.get(i++));
             } else {
-                products.set(k++, right.get(j++));
+                products.set(k++, rightList.get(j++));
             }
         }
 
-        while (i < left.size()) {
-            products.set(k++, left.get(i++));
+        while (i < leftList.size()) {
+            products.set(k++, leftList.get(i++));
         }
 
-        while (j < right.size()) {
-            products.set(k++, right.get(j++));
+        while (j < rightList.size()) {
+            products.set(k++, rightList.get(j++));
         }
     }
 }
