@@ -1,19 +1,9 @@
-
 package com.inventory.management.utils;
 
 import com.inventory.management.model.Product;
 
-/**
- * Provides validation utilities for input and data consistency.
- */
 public class ValidationUtility {
 
-    /**
-     * Validates a product's details.
-     *
-     * @param product the product to validate
-     * @throws IllegalArgumentException if validation fails
-     */
     public static void validateProduct(Product product) {
         if (product.getProductId() == null || product.getProductId().isEmpty()) {
             throw new IllegalArgumentException("Product ID cannot be empty.");
@@ -32,12 +22,6 @@ public class ValidationUtility {
         }
     }
 
-    /**
-     * Validates a search input.
-     *
-     * @param input the input string to validate
-     * @throws IllegalArgumentException if the input is null or empty
-     */
     public static void validateSearchInput(String input) {
         if (input == null || input.trim().isEmpty()) {
             throw new IllegalArgumentException("Search input cannot be empty.");

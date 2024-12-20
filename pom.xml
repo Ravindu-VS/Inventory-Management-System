@@ -10,55 +10,46 @@
     <version>1.0-SNAPSHOT</version>
 
     <properties>
-        <!-- Java version -->
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
-
-        <!-- Project encoding -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-
-        <!-- JavaFX version -->
         <javafx.version>23.0.1</javafx.version>
-
-        <!-- Apache PDFBox version -->
-        <pdfbox.version>2.0.29</pdfbox.version> <!-- Use the latest stable version -->
+        <pdfbox.version>2.0.29</pdfbox.version>
     </properties>
 
     <dependencies>
-        <!-- JavaFX Dependencies -->
+        <!-- JavaFX -->
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-controls</artifactId>
             <version>${javafx.version}</version>
         </dependency>
-
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-fxml</artifactId>
             <version>${javafx.version}</version>
         </dependency>
-
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-swing</artifactId>
             <version>${javafx.version}</version>
         </dependency>
 
-        <!-- GSON for JSON backup/restore -->
+        <!-- GSON -->
         <dependency>
             <groupId>com.google.code.gson</groupId>
             <artifactId>gson</artifactId>
             <version>2.10.1</version>
         </dependency>
 
-        <!-- BCrypt for password hashing -->
+        <!-- BCrypt -->
         <dependency>
             <groupId>org.mindrot</groupId>
             <artifactId>jbcrypt</artifactId>
             <version>0.4</version>
         </dependency>
 
-        <!-- JUnit for testing -->
+        <!-- JUnit for Tests -->
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter</artifactId>
@@ -66,40 +57,39 @@
             <scope>test</scope>
         </dependency>
 
-        <!-- SLF4J API -->
+        <!-- SLF4J -->
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
             <version>2.0.7</version>
         </dependency>
 
-        <!-- Logback Classic for SLF4J Implementation -->
+        <!-- Logback -->
         <dependency>
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-classic</artifactId>
             <version>1.4.7</version>
         </dependency>
 
-        <!-- Apache PDFBox for PDF Generation -->
+        <!-- PDFBox -->
         <dependency>
             <groupId>org.apache.pdfbox</groupId>
             <artifactId>pdfbox</artifactId>
             <version>${pdfbox.version}</version>
         </dependency>
-
-        <!-- Apache PDFBox FontBox (optional, but recommended) -->
         <dependency>
             <groupId>org.apache.pdfbox</groupId>
             <artifactId>fontbox</artifactId>
             <version>${pdfbox.version}</version>
         </dependency>
 
-        <!-- Apache PDFBox Commons (optional) -->
+        <!-- MongoDB Driver -->
         <dependency>
-            <groupId>org.apache.pdfbox</groupId>
-            <artifactId>commons-logging</artifactId>
-            <version>1.2</version>
+            <groupId>org.mongodb</groupId>
+            <artifactId>mongo-java-driver</artifactId>
+            <version>3.12.14</version>
         </dependency>
+
     </dependencies>
 
     <build>
@@ -110,7 +100,6 @@
                     <include>**/*.fxml</include>
                     <include>**/*.png</include>
                     <include>**/*.jpg</include>
-                    <!-- Include other resource types as needed -->
                 </includes>
             </resource>
         </resources>
@@ -126,7 +115,7 @@
                 </configuration>
             </plugin>
 
-            <!-- Maven Compiler Plugin -->
+            <!-- Compiler -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -136,7 +125,7 @@
                 </configuration>
             </plugin>
 
-            <!-- Exec Maven Plugin to Run the Main Class -->
+            <!-- Exec Plugin -->
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>exec-maven-plugin</artifactId>
@@ -146,7 +135,7 @@
                 </configuration>
             </plugin>
 
-            <!-- Maven Jar Plugin to Set Main-Class in Manifest -->
+            <!-- Jar Plugin -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
@@ -160,30 +149,6 @@
                 </configuration>
             </plugin>
 
-            <!-- Maven Shade Plugin (Optional): To Create an Uber-Jar -->
-            <!-- Uncomment if you need a single executable JAR with dependencies -->
-            <!--
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-shade-plugin</artifactId>
-                <version>3.4.1</version>
-                <executions>
-                    <execution>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>shade</goal>
-                        </goals>
-                        <configuration>
-                            <transformers>
-                                <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-                                    <mainClass>com.inventory.management.ui.UIManager</mainClass>
-                                </transformer>
-                            </transformers>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
-            -->
         </plugins>
     </build>
 </project>

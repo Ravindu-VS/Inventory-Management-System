@@ -2,26 +2,22 @@ package com.inventory.management.ui;
 
 import com.inventory.management.model.Product;
 import javafx.fxml.FXML;
-import javafx.scene.control.*;
 import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
 import java.time.LocalDate;
 
 public class AddProductController {
-
     @FXML private TextField productIdField;
     @FXML private TextField nameField;
     @FXML private TextField priceField;
     @FXML private TextField quantityField;
     @FXML private ChoiceBox<String> categoryChoiceBox;
-    @FXML private TextField imagePathField; // If you have image handling
+    @FXML private TextField imagePathField;
     @FXML private DatePicker dateAddedPicker;
 
     private Product newProduct;
 
-    /**
-     * Initializes the Add Product dialog.
-     */
     @FXML
     public void initialize() {
         categoryChoiceBox.getItems().addAll("Electronics", "Accessories", "Fruits", "Books", "Clothing", "Food");
@@ -29,23 +25,19 @@ public class AddProductController {
         dateAddedPicker.setValue(LocalDate.now());
     }
 
-    /**
-     * Collects product details from the form fields.
-     */
     public void collectProductDetails() {
         String productId = productIdField.getText().trim();
         String name = nameField.getText().trim();
-        double price = 0;
-        int quantity = 0;
+        double price;
+        int quantity;
         String category = categoryChoiceBox.getValue();
-        String imagePath = imagePathField.getText().trim(); // If applicable
+        String imagePath = imagePathField.getText().trim();
         LocalDate dateAdded = dateAddedPicker.getValue();
 
         try {
             price = Double.parseDouble(priceField.getText().trim());
             quantity = Integer.parseInt(quantityField.getText().trim());
         } catch (NumberFormatException e) {
-            // Handle invalid number formats
             newProduct = null;
             return;
         }
@@ -53,18 +45,10 @@ public class AddProductController {
         newProduct = new Product(productId, name, price, quantity, category, imagePath, dateAdded);
     }
 
-    /**
-     * Retrieves the new product.
-     *
-     * @return the newly created product
-     */
     public Product getNewProduct() {
         return newProduct;
     }
 
-    /**
-     * Clears all input fields.
-     */
     public void clearFields() {
         productIdField.clear();
         nameField.clear();

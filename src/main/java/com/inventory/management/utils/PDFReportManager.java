@@ -1,171 +1,130 @@
+// src/main/java/com/inventory/management/utils/PDFReportManager.java
 package com.inventory.management.utils;
 
 import com.inventory.management.model.Product;
+import javafx.embed.swing.SwingFXUtils;
+import javafx.scene.SnapshotParameters;
+import javafx.scene.chart.BarChart;
+import javafx.scene.chart.CategoryAxis;
+import javafx.scene.chart.NumberAxis;
+import javafx.scene.chart.XYChart;
+import javafx.scene.image.WritableImage;
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.pdmodel.PDPage;
 import org.apache.pdfbox.pdmodel.PDPageContentStream;
 import org.apache.pdfbox.pdmodel.common.PDRectangle;
-import org.apache.pdfbox.pdmodel.font.PDType1Font;
 import org.apache.pdfbox.pdmodel.graphics.image.PDImageXObject;
 
+import javax.imageio.ImageIO;
+import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 import java.time.LocalDate;
 import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
 
-/**
- * Utility class to manage PDF report generation using Apache PDFBox.
- */
 public class PDFReportManager {
 
     /**
-     * Generates a comprehensive PDF report of the inventory.
+     * Generates a chart image file for the given inventory data.
      *
-     * @param filePath      The path where the PDF will be saved.
-     * @param inventoryData The list of products to include in the report.
-     * @param chartImage    The image of the chart to include.
-     * @throws IOException If an error occurs during PDF generation.
+     * @param inventoryData The list of products to base the chart on.
+     * @return The File object pointing to the created chart image.
+     * @throws IOException if an error occurs during image writing
      */
-    public static void generateReport(String filePath, List<Product> inventoryData, File chartImage) throws IOException {
-        // Create a new document
-        PDDocument document = new PDDocument();
+    public static File generateChartForReport(List<Product> inventoryData) throws IOException {
+        // Example: Generate a simple BarChart
+        Map<String, Integer> categoryQuantity = inventoryData.stream()
+                .collect(Collectors.groupingBy(Product::getCategory, Collectors.summingInt(Product::getQuantity)));
 
-        // Add a page
-        PDPage page = new PDPage(PDRectangle.LETTER);
-        document.addPage(page);
+        CategoryAxis xAxis = new CategoryAxis();
+        xAxis.setLabel("Category");
 
-        // Start a new content stream
-        PDPageContentStream contentStream = new PDPageContentStream(document, page);
+        NumberAxis yAxis = new NumberAxis();
+        yAxis.setLabel("Total Quantity");
 
-        // Define starting positions
-        float margin = 50;
-        float yStart = PDRectangle.LETTER.getHeight() - margin;
-        float yPosition = yStart;
+        BarChart<String, Number> barChart = new BarChart<>(xAxis, yAxis);
+        barChart.setTitle("Inventory Quantity by Category");
 
-        // Add Title
-        contentStream.beginText();
-        contentStream.setFont(PDType1Font.HELVETICA_BOLD, 20);
-        contentStream.newLineAtOffset(margin, yPosition);
-        contentStream.showText("Inventory Report");
-        contentStream.endText();
+        XYChart.Series<String, Number> series = new XYChart.Series<>();
+        series.setName("Quantity");
 
-        yPosition -= 25;
-
-        // Add Report Date
-        contentStream.beginText();
-        contentStream.setFont(PDType1Font.HELVETICA, 12);
-        contentStream.newLineAtOffset(margin, yPosition);
-        contentStream.showText("Report Generated on: " + LocalDate.now());
-        contentStream.endText();
-
-        yPosition -= 20;
-
-        // Draw a line separator
-        contentStream.moveTo(margin, yPosition);
-        contentStream.lineTo(PDRectangle.LETTER.getWidth() - margin, yPosition);
-        contentStream.stroke();
-
-        yPosition -= 20;
-
-        // Add Table Headers
-        contentStream.setFont(PDType1Font.HELVETICA_BOLD, 12);
-        contentStream.beginText();
-        contentStream.newLineAtOffset(margin, yPosition);
-        contentStream.showText(String.format("%-15s %-20s %-15s %-10s %-10s",
-                "Product ID", "Name", "Category", "Price", "Quantity"));
-        contentStream.endText();
-
-        yPosition -= 15;
-
-        // Draw another line separator
-        contentStream.moveTo(margin, yPosition);
-        contentStream.lineTo(PDRectangle.LETTER.getWidth() - margin, yPosition);
-        contentStream.stroke();
-
-        yPosition -= 15;
-
-        // Add Table Content
-        contentStream.setFont(PDType1Font.HELVETICA, 12);
-        for (Product product : inventoryData) {
-            if (yPosition < margin) {
-                // Add new page if space is insufficient
-                contentStream.close();
-                page = new PDPage(PDRectangle.LETTER);
-                document.addPage(page);
-                contentStream = new PDPageContentStream(document, page);
-                yPosition = yStart;
-            }
-
-            contentStream.beginText();
-            contentStream.newLineAtOffset(margin, yPosition);
-            contentStream.showText(String.format("%-15s %-20s %-15s $%-9.2f %-10d",
-                    product.getProductId(),
-                    product.getName(),
-                    product.getCategory(),
-                    product.getPrice(),
-                    product.getQuantity()));
-            contentStream.endText();
-
-            yPosition -= 15;
+        for (Map.Entry<String, Integer> entry : categoryQuantity.entrySet()) {
+            series.getData().add(new XYChart.Data<>(entry.getKey(), entry.getValue()));
         }
 
-        yPosition -= 20;
+        barChart.getData().add(series);
 
-        // Add Chart Image if available
-        if (chartImage != null && chartImage.exists()) {
-            PDImageXObject pdImage = PDImageXObject.createFromFile(chartImage.getAbsolutePath(), document);
-            float imageWidth = PDRectangle.LETTER.getWidth() - 2 * margin;
-            float imageHeight = imageWidth * pdImage.getHeight() / pdImage.getWidth(); // Maintain aspect ratio
+        WritableImage writableImage = barChart.snapshot(new SnapshotParameters(), null);
+        BufferedImage bufferedImage = SwingFXUtils.fromFXImage(writableImage, null);
 
-            if (yPosition - imageHeight < margin) {
-                // Add new page if space is insufficient
-                contentStream.close();
-                page = new PDPage(PDRectangle.LETTER);
-                document.addPage(page);
-                contentStream = new PDPageContentStream(document, page);
-                yPosition = yStart;
-            }
-
-            contentStream.drawImage(pdImage, margin, yPosition - imageHeight, imageWidth, imageHeight);
-            yPosition -= (imageHeight + 20);
-        }
-
-        // Close the content stream
-        contentStream.close();
-
-        // Save the document
-        document.save(filePath);
-        document.close();
+        File tempFile = File.createTempFile("inventory_chart", ".png");
+        ImageIO.write(bufferedImage, "png", tempFile);
+        return tempFile;
     }
 
     /**
-     * Sample main method to test PDF report generation.
-     * You can remove or modify this method as needed.
+     * Generates a PDF report with the given inventory data and chart image.
+     *
+     * @param filePath      The path where the PDF will be saved.
+     * @param inventoryData The list of products to include in the report.
+     * @param chartImage    The chart image file to include in the report.
+     * @throws IOException if an error occurs during PDF generation
      */
-    public static void main(String[] args) {
-        try {
-            // Sample inventory data
-            List<Product> sampleData = List.of(
-                    new Product("P001", "Apple", 2.50, 100, "Fruits", "/images/apple.png", LocalDate.now().minusDays(2)),
-                    new Product("P002", "Banana", 1.20, 200, "Fruits", "/images/banana.png", LocalDate.now().minusDays(1)),
-                    new Product("P003", "Orange", 2.00, 150, "Fruits", "/images/orange.png", LocalDate.now().minusDays(3)),
-                    new Product("P010", "Laptop", 1000.00, 20, "Electronics", "/images/laptop.png", LocalDate.now().minusDays(10)),
-                    new Product("P011", "Smartphone", 800.00, 50, "Electronics", "/images/smartphone.png", LocalDate.now().minusDays(5)),
-                    new Product("P012", "Headphones", 150.00, 80, "Accessories", "/images/headphones.png", LocalDate.now().minusDays(7)),
-                    new Product("P013", "Keyboard", 70.00, 60, "Accessories", "/images/keyboard.png", LocalDate.now().minusDays(4))
-            );
+    public static void generateReport(String filePath, List<Product> inventoryData, File chartImage) throws IOException {
+        PDDocument document = new PDDocument();
+        PDPage page = new PDPage(PDRectangle.LETTER);
+        document.addPage(page);
 
-            // Path to save the PDF report
-            String pdfPath = "Inventory_Report.pdf";
+        PDPageContentStream contentStream = new PDPageContentStream(document, page);
 
-            // Path to the chart image (replace with actual path if you have a chart)
-            File chartFile = new File("chart.png"); // Ensure this file exists or set to null
+        // Add Text Content
+        contentStream.beginText();
+        contentStream.setFont(org.apache.pdfbox.pdmodel.font.PDType1Font.HELVETICA_BOLD, 20);
+        contentStream.newLineAtOffset(50, 700);
+        contentStream.showText("Inventory Report");
+        contentStream.endText();
 
-            // Generate PDF report
-            generateReport(pdfPath, sampleData, chartFile);
-            System.out.println("Report generated successfully at " + pdfPath);
-        } catch (IOException e) {
-            e.printStackTrace();
+        contentStream.beginText();
+        contentStream.setFont(org.apache.pdfbox.pdmodel.font.PDType1Font.HELVETICA, 12);
+        contentStream.newLineAtOffset(50, 680);
+        contentStream.showText("Generated on: " + LocalDate.now().toString());
+        contentStream.endText();
+
+        // Add Table Headers
+        contentStream.beginText();
+        contentStream.setFont(org.apache.pdfbox.pdmodel.font.PDType1Font.HELVETICA_BOLD, 12);
+        contentStream.newLineAtOffset(50, 660);
+        contentStream.showText(String.format("%-15s %-20s %-15s %-10s %-10s", "Product ID", "Name", "Category", "Price", "Quantity"));
+        contentStream.endText();
+
+        // Add Table Content
+        int yPosition = 640;
+        contentStream.setFont(org.apache.pdfbox.pdmodel.font.PDType1Font.HELVETICA, 12);
+        for (Product p : inventoryData) {
+            contentStream.beginText();
+            contentStream.newLineAtOffset(50, yPosition);
+            contentStream.showText(String.format("%-15s %-20s %-15s $%-9.2f %-10d",
+                    p.getProductId(),
+                    p.getName(),
+                    p.getCategory(),
+                    p.getPrice(),
+                    p.getQuantity()));
+            contentStream.endText();
+            yPosition -= 20;
+            if (yPosition < 100) break; // Prevent writing off the page
         }
+
+        // Add Chart Image
+        if (chartImage != null && chartImage.exists()) {
+            PDImageXObject pdImage = PDImageXObject.createFromFileByContent(chartImage, document);
+            contentStream.drawImage(pdImage, 50, 100, 500, 300);
+        }
+
+        contentStream.close();
+
+        document.save(filePath);
+        document.close();
     }
 }

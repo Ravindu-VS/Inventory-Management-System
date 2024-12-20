@@ -1,22 +1,11 @@
 package com.inventory.management.sorting;
 
 import com.inventory.management.model.Product;
-
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 
-/**
- * Implements Merge Sort algorithm for sorting products.
- */
 public class MergeSort {
-
-    /**
-     * Sorts the list of products using the provided comparator.
-     *
-     * @param products   the list of products to sort
-     * @param comparator the comparator defining the sort order
-     */
     public static void sort(List<Product> products, Comparator<Product> comparator) {
         if (products == null || products.size() <= 1) return;
         mergeSort(products, 0, products.size() - 1, comparator);

@@ -7,11 +7,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
 
-/**
- * Controller for the Login UI.
- */
 public class LoginController {
-
     @FXML private TextField usernameField;
     @FXML private PasswordField passwordField;
     @FXML private Button loginButton;
@@ -19,9 +15,6 @@ public class LoginController {
     private User adminUser = new User("admin", "admin123", User.Role.ADMIN);
     private User staffUser = new User("staff", "staff123", User.Role.STAFF);
 
-    /**
-     * Handles the login button action.
-     */
     @FXML
     private void onLogin() {
         String username = usernameField.getText().trim();
@@ -34,13 +27,6 @@ public class LoginController {
         }
     }
 
-    /**
-     * Authenticates the user based on provided credentials.
-     *
-     * @param username the entered username
-     * @param password the entered password
-     * @return true if authentication is successful; otherwise, false
-     */
     private boolean authenticate(String username, String password) {
         if (username.equals(adminUser.getUsername()) && adminUser.checkPassword(password)) {
             UIManager.currentUser = adminUser;
@@ -52,9 +38,6 @@ public class LoginController {
         return false;
     }
 
-    /**
-     * Loads the Main UI after successful login.
-     */
     private void loadMainUI() {
         try {
             Stage stage = (Stage) loginButton.getScene().getWindow();
@@ -69,12 +52,6 @@ public class LoginController {
         }
     }
 
-    /**
-     * Displays an alert dialog with the specified title and message.
-     *
-     * @param title   the title of the alert
-     * @param message the message content
-     */
     private void showAlert(String title, String message) {
         Alert alert;
         if ("Login Failed".equalsIgnoreCase(title) || "Error".equalsIgnoreCase(title)) {

@@ -5,42 +5,58 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b4dc8f4b-4930-45e1-a53c-bf7fcf3fe3e9" name="Changes" comment="ui updated">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/inventory/management/recursive/CalculationUtility.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/inventory/management/recursive/SearchUtility.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/inventory/management/sorting/MultiCriteriaSorting.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/inventory/management/sorting/SortingAlgorithms.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/inventory/management/sorting/SortingUtility.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/inventory/management/ui/AddProductController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/inventory/management/ui/EditProductController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/inventory/management/ui/InventoryBackupManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/inventory/management/ui/RealTimeProduct.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/inventory/management/utils/AuthenticationManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/inventory/management/utils/ChartManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/inventory/management/utils/ChartUtility.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/inventory/management/utils/FilteringUtility.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/inventory/management/utils/InventoryManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/inventory/management/utils/PDFReportManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/inventory/management/utils/ValidationUtility.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/inventory/management/ui/views/AddProductDialog.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/inventory/management/ui/views/EditProductDialog.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/inventory/management/db/MongoDBClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Images/add.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Images/cloud-backup-up-arrow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Images/restore.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Images/tick.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/MANIFEST.MF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/inventory/management/ProductTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/inventory/management/RecursiveTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/inventory/management/SortingTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/META-INF/MANIFEST.MF" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Images/bg.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Images/bg.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Images/cards-with-dollar-sign.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Images/cards-with-dollar-sign.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Images/categories.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Images/categories.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Images/filter.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Images/filter.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Images/home-icon-silhouette.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Images/home-icon-silhouette.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Images/line-chart.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Images/line-chart.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Images/lock.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Images/lock.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Images/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Images/logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Images/logout.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Images/logout.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Images/padlock.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Images/padlock.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Images/report.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Images/report.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Images/sort.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Images/sort.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/inventory/management/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/inventory/management/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/inventory/management/model/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/inventory/management/model/Product.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/inventory/management/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/inventory/management/model/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/inventory/management/performance/PerformanceAnalysis.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/inventory/management/performance/PerformanceAnalysis.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/inventory/management/recursive/CalculationUtility.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/inventory/management/recursive/CalculationUtility.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/inventory/management/recursive/RecursiveOperations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/inventory/management/recursive/RecursiveOperations.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/inventory/management/recursive/SearchUtility.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/inventory/management/recursive/SearchUtility.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/inventory/management/sorting/MergeSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/inventory/management/sorting/MergeSort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/inventory/management/sorting/MultiCriteriaSorting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/inventory/management/sorting/MultiCriteriaSorting.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/inventory/management/sorting/QuickSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/inventory/management/sorting/QuickSort.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/inventory/management/sorting/ShellSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/inventory/management/sorting/ShellSort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/inventory/management/sorting/SortingAlgorithms.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/inventory/management/sorting/SortingAlgorithms.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/inventory/management/sorting/SortingUtility.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/inventory/management/sorting/SortingUtility.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/inventory/management/ui/AddProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/inventory/management/ui/AddProductController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/inventory/management/ui/ChartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/inventory/management/ui/ChartController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/inventory/management/ui/EditProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/inventory/management/ui/EditProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/inventory/management/ui/InventoryBackupManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/inventory/management/utils/InventoryBackupManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/inventory/management/ui/InventoryUpdateController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/inventory/management/ui/InventoryUpdateController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/inventory/management/ui/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/inventory/management/ui/LoginController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/inventory/management/ui/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/inventory/management/ui/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/inventory/management/ui/RealTimeProduct.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/inventory/management/ui/RealTimeProduct.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/inventory/management/ui/UIManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/inventory/management/ui/UIManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/inventory/management/utils/AuthenticationManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/inventory/management/utils/AuthenticationManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/inventory/management/utils/ChartManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/inventory/management/utils/ChartManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/inventory/management/utils/ChartUtility.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/inventory/management/utils/ChartUtility.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/inventory/management/utils/FilteringUtility.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/inventory/management/utils/FilteringUtility.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/inventory/management/utils/PDFReportManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/inventory/management/utils/PDFReportManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/inventory/management/utils/ValidationUtility.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/inventory/management/utils/ValidationUtility.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/inventory/management/ui/views/chart.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/inventory/management/ui/views/chart.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/inventory/management/ui/views/login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/inventory/management/ui/views/login.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/inventory/management/ui/views/main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/inventory/management/ui/views/main.fxml" afterDir="false" />
@@ -91,7 +107,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Ravindu-VS/IdeaProjects/InventoryManagementSystem/src/Images",
+    "last_opened_file_path": "C:/Users/Ravindu-VS/IdeaProjects/InventoryManagementSystem/src/main/resources/Images",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -108,14 +124,19 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Ravindu-VS\IdeaProjects\InventoryManagementSystem\src\main\resources\Images" />
       <recent name="C:\Users\Ravindu-VS\IdeaProjects\InventoryManagementSystem\src\Images" />
       <recent name="C:\Users\Ravindu-VS\IdeaProjects\InventoryManagementSystem\src\main\java\com\inventory\management" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Ravindu-VS\IdeaProjects\InventoryManagementSystem\src\main\resources" />
       <recent name="C:\Users\Ravindu-VS\IdeaProjects\InventoryManagementSystem\src\main\resources\com\inventory\management\ui\views" />
       <recent name="C:\Users\Ravindu-VS\IdeaProjects\InventoryManagementSystem\src\main\resources.com.inventory.management.ui.views" />
       <recent name="C:\Users\Ravindu-VS\IdeaProjects\InventoryManagementSystem\src\main" />
       <recent name="C:\Users\Ravindu-VS\IdeaProjects\InventoryManagementSystem\src" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.inventory.management" />
     </key>
   </component>
   <component name="RunManager">
@@ -156,6 +177,7 @@
       <workItem from="1733984918029" duration="21308000" />
       <workItem from="1734365678583" duration="753000" />
       <workItem from="1734368608326" duration="37877000" />
+      <workItem from="1734625689838" duration="19593000" />
     </task>
     <task id="LOCAL-00001" summary="started">
       <option name="closed" value="true" />
@@ -173,7 +195,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733855583284</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="ui updated">
+      <option name="closed" value="true" />
+      <created>1734625765399</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1734625765399</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -193,7 +223,19 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="started" />
-    <option name="LAST_COMMIT_MESSAGE" value="started" />
+    <MESSAGE value="ui updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="ui updated" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/inventory/management/ui/AddProductController.java</url>
+          <line>26</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

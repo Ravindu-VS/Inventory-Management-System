@@ -1,4 +1,3 @@
-
 package com.inventory.management.ui;
 
 import com.inventory.management.model.Product;

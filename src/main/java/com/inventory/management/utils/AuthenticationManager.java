@@ -4,12 +4,10 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class AuthenticationManager {
-
     private static final Map<String, String> userCredentials = new HashMap<>();
     private static final Map<String, String> userRoles = new HashMap<>();
 
     static {
-        // Sample users (username:password) and roles (username:role)
         userCredentials.put("admin", "admin123");
         userRoles.put("admin", "Admin");
 

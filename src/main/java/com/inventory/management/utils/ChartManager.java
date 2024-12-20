@@ -10,17 +10,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-/**
- * Manages chart-related functionalities.
- */
 public class ChartManager {
-
-    /**
-     * Generates a BarChart showing product quantities by category.
-     *
-     * @param productData the list of products
-     * @return the generated BarChart
-     */
     public static BarChart<String, Number> generateCategoryChart(List<Product> productData) {
         CategoryAxis xAxis = new CategoryAxis();
         xAxis.setLabel("Category");

@@ -1,17 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?import javafx.scene.chart.*?>
-<?import javafx.scene.layout.BorderPane?>
 
-<BorderPane xmlns:fx="http://javafx.com/javafx"
-            fx:controller="com.inventory.management.ui.ChartController">
-    <center>
-        <BarChart fx:id="barChart" title="Inventory Chart">
-            <xAxis>
-                <CategoryAxis label="Category"/>
-            </xAxis>
-            <yAxis>
-                <NumberAxis label="Quantity"/>
-            </yAxis>
-        </BarChart>
-    </center>
-</BorderPane>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns="http://javafx.com/javafx/8.0.171"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.inventory.management.ui.ChartController"
+      spacing="20" style="-fx-padding: 20;">
+
+    <!-- Bar Chart -->
+    <BarChart fx:id="barChart" title="Inventory Quantity by Category">
+        <xAxis>
+            <CategoryAxis label="Category"/>
+        </xAxis>
+        <yAxis>
+            <NumberAxis label="Total Quantity"/>
+        </yAxis>
+    </BarChart>
+
+    <!-- Pie Chart -->
+    <PieChart fx:id="pieChart" title="Inventory Distribution by Category"/>
+
+    <!-- Line Chart -->
+    <LineChart fx:id="lineChart" title="Inventory Value Over Time">
+        <xAxis>
+            <CategoryAxis label="Date Added"/>
+        </xAxis>
+        <yAxis>
+            <NumberAxis label="Total Value ($)"/>
+        </yAxis>
+    </LineChart>
+</VBox>
