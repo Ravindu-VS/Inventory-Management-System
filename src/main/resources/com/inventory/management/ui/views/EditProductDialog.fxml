@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ButtonType?>
+<?import javafx.scene.control.DialogPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<DialogPane prefHeight="450.0" prefWidth="403.0"
+            style="-fx-background-color: rgba(255,255,255,0.5); -fx-background-radius : 15px;"
+            xmlns="http://javafx.com/javafx/23.0.1"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.inventory.management.ui.EditProductController">
+    <!-- Define Standard Dialog Buttons -->
+    <buttonTypes>
+        <ButtonType buttonData="OK_DONE" text="OK"/>
+        <ButtonType buttonData="CANCEL_CLOSE" text="Cancel"/>
+    </buttonTypes>
+    <content>
+        <AnchorPane prefHeight="450.0" prefWidth="386.0"
+                    style="-fx-background-color: rgba(255,255,255,0.5); -fx-background-radius: 15px;">
+            <children>
+                <!-- Product ID -->
+                <Label layoutX="50.0" layoutY="80.0"
+                       style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: black;"
+                       text="Product ID :" />
+                <TextField fx:id="productIdField" layoutX="200.0" layoutY="75.0" prefWidth="150.0" />
+
+                <!-- Product Name -->
+                <Label layoutX="50.0" layoutY="130.0"
+                       style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: black;"
+                       text="Product Name :" />
+                <TextField fx:id="nameField" layoutX="200.0" layoutY="125.0" prefWidth="150.0" />
+
+                <!-- Category -->
+                <Label layoutX="50.0" layoutY="180.0"
+                       style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: black;"
+                       text="Category :" />
+                <ChoiceBox fx:id="categoryChoiceBox" layoutX="200.0" layoutY="175.0" prefWidth="150.0" />
+
+                <!-- Price -->
+                <Label layoutX="50.0" layoutY="230.0"
+                       style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: black;"
+                       text="Price :" />
+                <TextField fx:id="priceField" layoutX="200.0" layoutY="225.0" prefWidth="150.0" />
+
+                <!-- Quantity -->
+                <Label layoutX="50.0" layoutY="280.0"
+                       style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: black;"
+                       text="Quantity :" />
+                <TextField fx:id="quantityField" layoutX="200.0" layoutY="275.0" prefWidth="150.0" />
+
+                <!-- Image Path -->
+                <Label layoutX="50.0" layoutY="330.0"
+                       style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: black;"
+                       text="Image Path :" />
+                <TextField fx:id="imagePathField" layoutX="200.0" layoutY="325.0" prefWidth="150.0" />
+                <Label layoutX="50.0" layoutY="380.0"
+                       style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: black;"
+                       text="Date Added :" />
+                <DatePicker fx:id="dateAddedPicker" layoutX="200.0" layoutY="380.0" />
+            </children>
+        </AnchorPane>
+    </content>
+</DialogPane>

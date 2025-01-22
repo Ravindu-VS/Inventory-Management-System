@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="800" prefWidth="1200" style="-fx-font-family: 'Roboto', 'Arial', sans-serif; -fx-background-color: linear-gradient(to bottom left, #4ceb44, blue);" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.inventory.management.ui.MainController">
+
+   <!-- TOP BAR -->
+   <top>
+      <AnchorPane prefHeight="70.0" prefWidth="1343.0" style="-fx-background-color: rgba(255,255,255,0.7); -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 10,0,0,2);">
+         <children>
+            <HBox alignment="CENTER_LEFT" layoutX="20.0" layoutY="15.0" spacing="10">
+               <children>
+                  <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@/images/logo.png" />
+                     </image>
+                  </ImageView>
+                  <Label style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: black;" text="Inventory Management System" />
+               </children>
+            </HBox>
+
+            <HBox alignment="CENTER_RIGHT" layoutX="894.0" layoutY="18.0" spacing="20">
+               <children>
+                  <Hyperlink fx:id="homeLink" onAction="#onHome" style="-fx-font-size: 16px; -fx-text-fill: black; -fx-font-weight: bold; -fx-text-decoration: none;" text="Home">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0">
+                           <image>
+                              <Image url="@/images/home-icon-silhouette.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Hyperlink>
+                  <Hyperlink fx:id="chartsLink" onAction="#onCharts" style="-fx-font-size: 16px; -fx-text-fill: black; -fx-font-weight: bold; -fx-text-decoration: none;" text="Charts">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0">
+                           <image>
+                              <Image url="@/images/line-chart.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Hyperlink>
+                  <!-- Removed reportsLink from topbar -->
+                  <Hyperlink fx:id="logoutLink" onAction="#onLogout" style="-fx-font-size: 16px; -fx-text-fill: black; -fx-font-weight: bold; -fx-text-decoration: none;" text="Logout">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0">
+                           <image>
+                              <Image url="@/images/logout.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Hyperlink>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+   </top>
+
+   <!-- SIDEBAR -->
+   <left>
+      <VBox prefWidth="250.0" spacing="20" style="-fx-background-color: rgba(255,255,255,0.5); -fx-padding: 20; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 5,0,0,2);">
+         <children>
+            <VBox alignment="TOP_LEFT" prefHeight="618.0" prefWidth="210.0" spacing="15.0">
+               <!-- Filters Header -->
+               <HBox alignment="CENTER_LEFT" spacing="10">
+                  <ImageView fitHeight="28.0" fitWidth="28.0">
+                     <image>
+                        <Image url="@/images/filter.png" />
+                     </image>
+                  </ImageView>
+                  <Label style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: black;" text="Filters" />
+               </HBox>
+
+               <!-- Category Filter -->
+               <HBox alignment="CENTER_LEFT" spacing="10">
+                  <ImageView fitHeight="25.0" fitWidth="25.0">
+                     <image>
+                        <Image url="@/images/categories.png" />
+                     </image>
+                  </ImageView>
+                  <Label style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: black;" text="Category" />
+               </HBox>
+               <ChoiceBox fx:id="categoryChoiceBox" prefWidth="220.0" style="-fx-background-radius:5; -fx-background-color:#F0F0F0; -fx-padding:5;" />
+
+               <!-- Min Price Filter -->
+               <HBox alignment="CENTER_LEFT" spacing="10">
+                  <ImageView fitHeight="25.0" fitWidth="25.0">
+                     <image>
+                        <Image url="@/images/cards-with-dollar-sign.png" />
+                     </image>
+                  </ImageView>
+                  <Label style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: black;" text="Min Price" />
+               </HBox>
+               <TextField fx:id="minValueField" prefWidth="220.0" style="-fx-background-color:#F0F0F0; -fx-background-radius:5;" />
+
+               <!-- Max Price Filter -->
+               <HBox alignment="CENTER_LEFT" spacing="10">
+                  <ImageView fitHeight="25.0" fitWidth="25.0">
+                     <image>
+                        <Image url="@/images/cards-with-dollar-sign.png" />
+                     </image>
+                  </ImageView>
+                  <Label style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: black;" text="Max Price" />
+               </HBox>
+               <TextField fx:id="maxValueField" prefWidth="220.0" style="-fx-background-color:#F0F0F0; -fx-background-radius:5;" />
+
+               <!-- Apply Price Filter Button -->
+               <Button fx:id="applyPriceFilterButton" onAction="#onApplyPriceFilter" prefWidth="220.0" style="-fx-background-color: #4ceb44; -fx-text-fill: black; -fx-font-weight: bold; -fx-background-radius: 5; -fx-padding: 8 20;" text="Apply" />
+
+               <!-- Recursive Operations Button -->
+               <Button fx:id="recursiveOperationsButton" onAction="#onPerformRecursiveOperations" prefWidth="220.0" style="-fx-background-color: blue; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 5; -fx-padding: 8 20;" text="Recursive Operations" />
+
+               <!-- Separator -->
+               <Separator prefWidth="220.0" />
+
+               <!-- Sort By Header -->
+               <HBox alignment="CENTER_LEFT" spacing="10">
+                  <ImageView fitHeight="25.0" fitWidth="25.0">
+                     <image>
+                        <Image url="@/images/sort.png" />
+                     </image>
+                  </ImageView>
+                  <Label style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: black;" text="Sort By" />
+               </HBox>
+               <ChoiceBox fx:id="sortChoiceBox" prefWidth="220.0" style="-fx-background-radius:5; -fx-background-color:#F0F0F0; -fx-padding:5;" />
+
+               <!-- Backup and Restore Buttons -->
+               <Button fx:id="backupButton" onAction="#onBackup" prefWidth="220.0" style="-fx-background-color: #4ceb44; -fx-text-fill: black; -fx-font-weight: bold; -fx-background-radius: 5; -fx-padding: 8 20;" text="Backup Inventory" />
+               <Button fx:id="restoreButton" onAction="#onRestore" prefWidth="220.0" style="-fx-background-color: blue; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 5; -fx-padding: 8 20;" text="Restore Inventory" />
+
+               <!-- Generate Report Button (Single Option Now) -->
+               <Button fx:id="generateReportButton" onAction="#onGenerateReport" prefWidth="220.0" style="-fx-background-color: #f39c12; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 5; -fx-padding: 8 20;" text="Generate Report">
+                  <graphic>
+                     <ImageView fitHeight="20.0" fitWidth="20.0">
+                        <image>
+                           <!-- Use the report image from topbar -->
+                           <Image url="@/images/report.png" />
+                        </image>
+                     </ImageView>
+                  </graphic>
+               </Button>
+            </VBox>
+         </children>
+      </VBox>
+   </left>
+
+   <center>
+      <VBox spacing="20" style="-fx-padding:20;">
+         <children>
+            <Label fx:id="welcomeLabel" style="-fx-font-size: 18px; -fx-text-fill: black;" />
+            <HBox spacing="10">
+               <TextField fx:id="searchBar" promptText="Search products..." style="-fx-background-color: rgba(255,255,255,0.8); -fx-background-radius: 5; -fx-padding: 10 20;" HBox.hgrow="ALWAYS" />
+               <Button fx:id="addProductButton" onAction="#onAddProduct" style="-fx-background-color: blue; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 5; -fx-padding: 10 20;" text="Add Product" />
+            </HBox>
+
+            <TableView fx:id="productTable" prefHeight="586.0" prefWidth="821.0" style="-fx-background-color: rgba(255,255,255,0.5); -fx-border-color: transparent; -fx-background-radius: 5;" tableMenuButtonVisible="false">
+               <columns>
+                  <TableColumn fx:id="colId" prefWidth="150.0" text="PRODUCT ID">
+                     <cellValueFactory>
+                        <PropertyValueFactory property="productId" />
+                     </cellValueFactory>
+                  </TableColumn>
+                  <TableColumn fx:id="colName" prefWidth="150.0" text="PRODUCT">
+                     <cellValueFactory>
+                        <PropertyValueFactory property="name" />
+                     </cellValueFactory>
+                  </TableColumn>
+                  <TableColumn fx:id="colCategory" prefWidth="150.0" text="CATEGORY">
+                     <cellValueFactory>
+                        <PropertyValueFactory property="category" />
+                     </cellValueFactory>
+                  </TableColumn>
+                  <TableColumn fx:id="colPrice" prefWidth="150.0" text="PRICE">
+                     <cellValueFactory>
+                        <PropertyValueFactory property="price" />
+                     </cellValueFactory>
+                  </TableColumn>
+                  <TableColumn fx:id="colQuantity" prefWidth="150.0" text="QUANTITY">
+                     <cellValueFactory>
+                        <PropertyValueFactory property="quantity" />
+                     </cellValueFactory>
+                  </TableColumn>
+                  <TableColumn fx:id="colActions" prefWidth="150.0" text="ACTIONS">
+                  </TableColumn>
+               </columns>
+            </TableView>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

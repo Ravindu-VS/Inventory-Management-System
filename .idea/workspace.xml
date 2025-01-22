@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b4dc8f4b-4930-45e1-a53c-bf7fcf3fe3e9" name="Changes" comment="ui updated" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="FxmlFile" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="PUSH_AUTO_UPDATE" value="true" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GithubDefaultAccount">
+    <option name="defaultAccountId" value="4832c518-59c4-4ac3-880e-18abe1dd1a0f" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="jar://$MAVEN_REPOSITORY$/org/openjfx/javafx-graphics/23.0.1/javafx-graphics-23.0.1-sources.jar!/com/sun/glass/ui/win/WinApplication.java" root0="SKIP_INSPECTION" />
+    <setting file="jar://$MAVEN_REPOSITORY$/org/openjfx/javafx-graphics/23.0.1/javafx-graphics-23.0.1-sources.jar!/com/sun/javafx/tk/quantum/GlassViewEventHandler.java" root0="SKIP_INSPECTION" />
+    <setting file="jar://$MAVEN_REPOSITORY$/org/openjfx/javafx-graphics/23.0.1/javafx-graphics-23.0.1-sources.jar!/com/sun/javafx/tk/quantum/QuantumToolkit.java" root0="SKIP_INSPECTION" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="2q1786MKspQkaAhwANEPfs2pQBb" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Application.JavaFX.executor": "Run",
+    "Application.Main.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/Ravindu-VS/IdeaProjects/InventoryManagementSystem/src/main/resources/Images",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "onboarding.tips.debug.path": "C:/Users/Ravindu-VS/IdeaProjects/InventoryManagementSystem/src/main/java/org/example/Main.java",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "vcs.Git",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Ravindu-VS\IdeaProjects\InventoryManagementSystem\src\main\resources\Images" />
+      <recent name="C:\Users\Ravindu-VS\IdeaProjects\InventoryManagementSystem\src\Images" />
+      <recent name="C:\Users\Ravindu-VS\IdeaProjects\InventoryManagementSystem\src\main\java\com\inventory\management" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Ravindu-VS\IdeaProjects\InventoryManagementSystem\src\main\resources" />
+      <recent name="C:\Users\Ravindu-VS\IdeaProjects\InventoryManagementSystem\src\main\resources\com\inventory\management\ui\views" />
+      <recent name="C:\Users\Ravindu-VS\IdeaProjects\InventoryManagementSystem\src\main\resources.com.inventory.management.ui.views" />
+      <recent name="C:\Users\Ravindu-VS\IdeaProjects\InventoryManagementSystem\src\main" />
+      <recent name="C:\Users\Ravindu-VS\IdeaProjects\InventoryManagementSystem\src" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.inventory.management" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="JavaFX" type="Application" factoryName="Application">
+      <option name="ALTERNATIVE_JRE_PATH" value="$USER_HOME$/.jdks/openjdk-23.0.1" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="com.inventory.management.Main" />
+      <module name="InventoryManagementSystem" />
+      <option name="VM_PARAMETERS" value="--module-path C:\Java\javafx-sdk-23.0.1\lib --add-modules javafx.controls,javafx.fxml " />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b4dc8f4b-4930-45e1-a53c-bf7fcf3fe3e9" name="Changes" comment="" />
+      <created>1733818066708</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1733818066708</updated>
+      <workItem from="1733818067793" duration="8471000" />
+      <workItem from="1733826570405" duration="155000" />
+      <workItem from="1733826740062" duration="79000" />
+      <workItem from="1733826829049" duration="2290000" />
+      <workItem from="1733838717855" duration="1874000" />
+      <workItem from="1733842613899" duration="1062000" />
+      <workItem from="1733850621447" duration="4539000" />
+      <workItem from="1733984918029" duration="21308000" />
+      <workItem from="1734365678583" duration="753000" />
+      <workItem from="1734368608326" duration="37877000" />
+      <workItem from="1734625689838" duration="19593000" />
+    </task>
+    <task id="LOCAL-00001" summary="started">
+      <option name="closed" value="true" />
+      <created>1733855461902</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1733855461902</updated>
+    </task>
+    <task id="LOCAL-00002" summary="started">
+      <option name="closed" value="true" />
+      <created>1733855583284</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1733855583284</updated>
+    </task>
+    <task id="LOCAL-00003" summary="ui updated">
+      <option name="closed" value="true" />
+      <created>1734625765399</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1734625765399</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="started" />
+    <MESSAGE value="ui updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="ui updated" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/inventory/management/ui/AddProductController.java</url>
+          <line>26</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
